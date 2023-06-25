@@ -1,5 +1,5 @@
 Steps to create any user on Ubuntu server:
-
+sudo su -
    useradd automation
    passwd automation
    Check UserHome: ls -lrt /home/automation
@@ -7,13 +7,19 @@ Steps to create any user on Ubuntu server:
 	 mkdir -p /home/automation
          chown -R automation:automation /home/automation
 How to change a shell for the user ?
+>>sudo su - automation
+>> echo $SHELL
+>> cat etc/shells
+>>chsh
+>> logout and check 
+
 
 simply run below command and provide the password and path of the required shell.
 Command is: chsh
 
 Steps to create and execute a shell script:
 ============================================
-Step1: Get Manual Commands for the requirement
+Step1: Get Manual Commands for the requirement  ( install iniginx , docker - (  version finf : docker -v )
 Step2: Select any command line editor like vi, vim and nano to write a script.
 Step3:  Write a Bash shell script
 	- Now open a text file with anyName and with any extension but will take .sh just to represent that text file is a shell script.
